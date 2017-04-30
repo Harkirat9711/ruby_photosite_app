@@ -1,0 +1,13 @@
+<html>
+<h1>Comments of User Photo Page
+</h1>
+<h3>
+  Comments of <%=@photo.user_id%>
+</h3>
+<body>
+<% @comments.each do|comment_variable| %>
+<p><b>Comment :</b><%=comment_variable.comment_text%></p>
+    <p>Comment Created at <%=comment_variable.date_time%></p>
+<%end%>
+</body>
+</html>

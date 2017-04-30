@@ -1,0 +1,14 @@
+<html>
+<h1>PhotoSite User Photo Page
+</h1>
+<h3>
+  Photos of <%=@user.first_name%> <%=@user.last_name%>
+</h3>
+<body>
+<% @photos.each do|photo_variable| %>
+<%=image_tag(photo_variable.file_name,alt: '#')%>
+    <p>Photo Created at <%=photo_variable.date_time%></p>
+<p><%= link_to "Show Comments", link_comments_path(photo_variable.id) %></p>
+    <%end%>
+</body>
+</html>
